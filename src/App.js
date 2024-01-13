@@ -1,31 +1,16 @@
-
 import React from "react";
 import Header from "./components/Header";
-import SpeedTest from "./components/SpeedTest";
+import Maincontent from "./components/Maincontent";
 import Footer from "./components/Footer";
-import Responsiveness from "./components/Responsiveness";
-
-
-
 
 function App() {
   return (
     <>
-    
       <Header />
-      
-          
-              <SpeedTest />
-             
+
+      <Maincontent />
+
       <Footer />
-      
-      <Responsiveness />
-     
-     
-    
-      
-
-
     </>
   );
 }
