@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Grid, Toolbar, Typography } from "@mui/material";
+import { Box, Grid, Toolbar, Typography, Button } from "@mui/material";
 import AutorenewIcon from "@mui/icons-material/Autorenew";
 
 const Maincontent = () => {
@@ -24,9 +24,6 @@ const Maincontent = () => {
             fontWeight: {
               xs: "normal",
               sm: "bold",
-              md: "bold",
-              lg: "bold",
-              xl: "bold",
             },
             fontStretch: {
               xs: "condensed",
@@ -42,7 +39,7 @@ const Maincontent = () => {
         </Typography>
       </Box>
 
-      <Box sx={{ display: "flex", justifyContent: "center" }}>
+      <Box sx={{ display: "flex", justifyContent: "center", flexDirection: 'column', alignItems: 'center' }}>
         <Toolbar variant="dense" sx={{ justifyContent: "center" }}>
           <Box>
             <Typography
@@ -75,12 +72,36 @@ const Maincontent = () => {
             <Grid item sx={{ marginLeft: "55px" }}>
               <Box>
                 <Typography>
-                  <AutorenewIcon sx={{ fontSize: "30px" }} />
+                  <AutorenewIcon sx={{ fontSize: "30px", color: "#01BF71", cursor: 'pointer' }} />
                 </Typography>
               </Box>
             </Grid>
           </Grid>
         </Toolbar>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          textAlign: "center",
+          paddingTop: "50px",
+        }}
+      >
+        <Button
+          variant="outlined"
+          size="small"
+          sx={{
+            paddingTop: "15px",
+            paddingBottom: "15px",
+            width: "165px",
+            height: "30px",
+            color: "#797777",
+            borderRadius: "8px",
+            border: "1px solid #01BF71"
+          }}
+        >
+          Show more info
+        </Button>
+      </Box>
       </Box>
     </>
   );

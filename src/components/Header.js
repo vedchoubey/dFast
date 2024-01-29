@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Box, Button, Toolbar, Typography } from "@mui/material";
+import { Box, Toolbar, Typography } from "@mui/material";
 
 import NetworkCheckIcon from "@mui/icons-material/NetworkCheck";
 
@@ -14,15 +14,15 @@ const Header = () => {
               flexGrow: "1",
               display: "flex",
               justifyContent: "center",
-              alignItems: "center",
+              marginTop: 5
             }}
           >
             <NetworkCheckIcon
-              sx={{ fontSize: "80px", color: "#008080", marginLeft: "62px" }}
+              sx={{ fontSize: "80px", color: "#01BF71" }}
             />
           </Box>
 
-          <Box sx={{ justifyContent: "flex-end" }}>
+          {/* <Box sx={{ justifyContent: "flex-end" }}>
             <Button
               size="small"
               sx={{
@@ -34,7 +34,7 @@ const Header = () => {
             >
               Privacy
             </Button>
-          </Box>
+          </Box> */}
         </Toolbar>
       </Box>
 
