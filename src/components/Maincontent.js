@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Grid, Toolbar, Typography, Button } from "@mui/material";
 import AutorenewIcon from "@mui/icons-material/Autorenew";
+import { ReactInternetSpeedMeter } from 'react-internet-meter'
+// import 'react-internet-speed-meter/dist/index.css'
 
 const Maincontent = () => {
+  const [wifiSpeed, setWifiSpeed] = useState(0);
+
   return (
     <>
       <Box
@@ -46,24 +50,37 @@ const Maincontent = () => {
               variant="h2"
               sx={{
                 fontSize: {
-                  xs: "110px",
+                  xs: "70px",
                   sm: "120px",
                   md: "130px",
                   lg: "150px",
                   xl: "160px",
                 },
+                fontWeight: '600'
               }}
             >
-              100
+              {wifiSpeed}
             </Typography>
           </Box>
-
+          <ReactInternetSpeedMeter
+            txtSubHeading=""
+            outputType="alert"
+            customClassName={null}
+            txtMainHeading=""
+            pingInterval={4000} // milliseconds 
+            thresholdUnit='megabyte' // "byte" , "kilobyte", "megabyte" 
+            threshold={100}
+            imageUrl="https://images.unsplash.com/source-404?fit=crop&fm=jpg&h=800&q=60&w=1200"
+            downloadSize="1781287"  //bytes
+            callbackFunctionOnNetworkDown={(speed) => console.log(`Internet speed is down ${speed}`)}
+            callbackFunctionOnNetworkTest={(speed) => setWifiSpeed(speed * 8)}
+          />
           <Grid container direction={"column"} spacing={2}>
             <Grid item>
               <Box>
                 <Typography
                   variant="h4"
-                  sx={{ fontSize: { xs: "35px", lg: "50px" } }}
+                  sx={{ fontSize: { xs: "25px", lg: "50px" } }}
                 >
                   <b>Mbps</b>
                 </Typography>
@@ -78,30 +95,30 @@ const Maincontent = () => {
             </Grid>
           </Grid>
         </Toolbar>
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          textAlign: "center",
-          paddingTop: "50px",
-        }}
-      >
-        <Button
-          variant="outlined"
-          size="small"
+        <Box
           sx={{
-            paddingTop: "15px",
-            paddingBottom: "15px",
-            width: "165px",
-            height: "30px",
-            color: "#797777",
-            borderRadius: "8px",
-            border: "1px solid #01BF71"
+            display: "flex",
+            justifyContent: "center",
+            textAlign: "center",
+            paddingTop: "50px",
           }}
         >
-          Show more info
-        </Button>
-      </Box>
+          <Button
+            variant="outlined"
+            size="small"
+            sx={{
+              paddingTop: "15px",
+              paddingBottom: "15px",
+              width: "165px",
+              height: "30px",
+              color: "#797777",
+              borderRadius: "8px",
+              border: "1px solid #01BF71"
+            }}
+          >
+            Show more info
+          </Button>
+        </Box>
       </Box>
     </>
   );

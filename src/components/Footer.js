@@ -25,7 +25,7 @@ const Footer = () => {
           gap: 2,
           display: 'flex',
         }}
-      >"
+      >
         <InstagramIcon fontSize="large" style={{ color: "#01BF71", cursor: 'pointer' }} onClick={() => window.location.href = 'https://www.instagram.com/dockdevelopers/'} />
         <FacebookIcon fontSize="large" style={{color: "#01BF71", cursor: 'pointer'}} onClick={() => window.location.href = 'https://www.facebook.com/DockDevelopers/'} />
         <XIcon fontSize="large" style={{color: "#01BF71", cursor: 'pointer'}} onClick={() => window.location.href = 'https://twitter.com/dockdevelopers'} />
