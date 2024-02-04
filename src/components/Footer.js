@@ -9,40 +9,71 @@ import myImage from "../Images/logo2.png";
 const Footer = () => {
   return (
     <Box
-    sx={{
-      position: 'absolute',
-      bottom: 0,
-      width: '100%',
-      paddingBottom: '4px',
-      marginLeft: '-8px',
-      gap: 10,
-      display: 'flex',
-      flexDirection: 'column',
-    }}>
+      sx={{
+        position: "absolute",
+        bottom: 0,
+        width: "100%",
+        paddingBottom: "4px",
+        marginLeft: "-8px",
+        gap: {
+          xs: 10,
+          sm: 10,
+          md: 8,
+          lg: 0,
+          xl: 0,
+        },
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
       <Box
         sx={{
-          justifyContent: 'center',
+          justifyContent: "center",
           gap: 2,
-          display: 'flex',
+          display: "flex",
         }}
       >
-        <InstagramIcon fontSize="large" style={{ color: "#01BF71", cursor: 'pointer' }} onClick={() => window.location.href = 'https://www.instagram.com/dockdevelopers/'} />
-        <FacebookIcon fontSize="large" style={{color: "#01BF71", cursor: 'pointer'}} onClick={() => window.location.href = 'https://www.facebook.com/DockDevelopers/'} />
-        <XIcon fontSize="large" style={{color: "#01BF71", cursor: 'pointer'}} onClick={() => window.location.href = 'https://twitter.com/dockdevelopers'} />
-        <LinkedInIcon fontSize="large" style={{color: "#01BF71", cursor: 'pointer'}} onClick={() => window.location.href = 'https://twitter.com/dockdevelopers'} />
+        <InstagramIcon
+          fontSize="large"
+          style={{ color: "#01BF71", cursor: "pointer" }}
+          onClick={() =>
+            (window.location.href = "https://www.instagram.com/dockdevelopers/")
+          }
+        />
+        <FacebookIcon
+          fontSize="large"
+          style={{ color: "#01BF71", cursor: "pointer" }}
+          onClick={() =>
+            (window.location.href = "https://www.facebook.com/DockDevelopers/")
+          }
+        />
+        <XIcon
+          fontSize="large"
+          style={{ color: "#01BF71", cursor: "pointer" }}
+          onClick={() =>
+            (window.location.href = "https://twitter.com/dockdevelopers")
+          }
+        />
+        <LinkedInIcon
+          fontSize="large"
+          style={{ color: "#01BF71", cursor: "pointer" }}
+          onClick={() =>
+            (window.location.href = "https://twitter.com/dockdevelopers")
+          }
+        />
       </Box>
 
       <Box
         sx={{
           display: "flex",
           justifyContent: "flex-end",
-          paddingBottom: '8px',
+          paddingBottom: "8px",
         }}
       >
         <Box>
           <Typography
             variant="subtitle2"
-            sx={{ fontSize: "10px", letterSpacing: '1px', color: '#a8a8a8' }}
+            sx={{ fontSize: "10px", letterSpacing: "1px", color: "#a8a8a8" }}
           >
             POWERED BY
           </Typography>
@@ -54,11 +85,11 @@ const Footer = () => {
             height: "15px",
             width: "120px",
             padding: "2px",
-            cursor: 'pointer'
+            cursor: "pointer",
           }}
           src={myImage}
           alt="DockDevelopers"
-          onClick={() => window.location.href = 'https://dockdevelopers.com/'}
+          onClick={() => (window.location.href = "https://dockdevelopers.com/")}
         />
       </Box>
     </Box>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Box, Grid, Toolbar, Typography, Button } from "@mui/material";
 import AutorenewIcon from "@mui/icons-material/Autorenew";
-import { ReactInternetSpeedMeter } from 'react-internet-meter'
+import { ReactInternetSpeedMeter } from "react-internet-meter";
 // import 'react-internet-speed-meter/dist/index.css'
 
 const Maincontent = () => {
@@ -43,7 +43,14 @@ const Maincontent = () => {
         </Typography>
       </Box>
 
-      <Box sx={{ display: "flex", justifyContent: "center", flexDirection: 'column', alignItems: 'center' }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          alignItems: "center",
+        }}
+      >
         <Toolbar variant="dense" sx={{ justifyContent: "center" }}>
           <Box>
             <Typography
@@ -56,7 +63,7 @@ const Maincontent = () => {
                   lg: "150px",
                   xl: "160px",
                 },
-                fontWeight: '600'
+                fontWeight: "600",
               }}
             >
               {wifiSpeed}
@@ -67,12 +74,14 @@ const Maincontent = () => {
             outputType="alert"
             customClassName={null}
             txtMainHeading=""
-            pingInterval={4000} // milliseconds 
-            thresholdUnit='megabyte' // "byte" , "kilobyte", "megabyte" 
+            pingInterval={4000} // milliseconds
+            thresholdUnit="megabyte" // "byte" , "kilobyte", "megabyte"
             threshold={100}
             imageUrl="https://images.unsplash.com/source-404?fit=crop&fm=jpg&h=800&q=60&w=1200"
-            downloadSize="1781287"  //bytes
-            callbackFunctionOnNetworkDown={(speed) => console.log(`Internet speed is down ${speed}`)}
+            downloadSize="1781287" //bytes
+            callbackFunctionOnNetworkDown={(speed) =>
+              console.log(`Internet speed is down ${speed}`)
+            }
             callbackFunctionOnNetworkTest={(speed) => setWifiSpeed(speed * 8)}
           />
           <Grid container direction={"column"} spacing={2}>
@@ -86,10 +95,27 @@ const Maincontent = () => {
                 </Typography>
               </Box>
             </Grid>
-            <Grid item sx={{ marginLeft: "55px" }}>
+            <Grid
+              item
+              sx={{
+                marginLeft: {
+                  xs: "20px",
+                  sm: "22px",
+                  md: "25px",
+                  xl: "50px",
+                  lg: "55px",
+                },
+              }}
+            >
               <Box>
                 <Typography>
-                  <AutorenewIcon sx={{ fontSize: "30px", color: "#01BF71", cursor: 'pointer' }} />
+                  <AutorenewIcon
+                    sx={{
+                      fontSize: "30px",
+                      color: "#01BF71",
+                      cursor: "pointer",
+                    }}
+                  />
                 </Typography>
               </Box>
             </Grid>
@@ -113,7 +139,7 @@ const Maincontent = () => {
               height: "30px",
               color: "#797777",
               borderRadius: "8px",
-              border: "1px solid #01BF71"
+              border: "1px solid #01BF71",
             }}
           >
             Show more info
